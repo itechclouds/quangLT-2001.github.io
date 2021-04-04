@@ -1,0 +1,430 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+table {
+    width: 80%;
+}
+table,h1,h2 {
+    margin:0.2rem auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+h2 {
+    color: #fff;
+    margin: 3rem 0 1.2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 4px 2px #000;
+}
+table {
+    background: gainsboro;
+}
+body {
+    padding: 2rem 0;
+    background: blueviolet;
+}
+th,td {
+    padding: 1rem 0;
+}
+.form_update {
+    width: 40%;
+    margin: 1.3rem auto;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0px 0px 15px 7px #000;
+}
+
+.form-update-item:nth-child(2) {
+    margin-top: 0.2rem !important;
+}
+.form-update-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 3.5rem 0;
+    position: relative;
+    width: 100%;
+    
+}
+label {
+    position: relative;
+    top: -5px;
+    left: 12px;
+    z-index: 5;
+    color: #000;
+    color: rgb(75, 78, 77);
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    z-index: 10;
+    font-size: 1.2rem;
+}
+input:focus ~ label,
+input:valid ~ label  {
+    top: -35px;
+}
+input {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    font-size: 1.3rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 179, 0);
+    outline: none;
+    z-index: 8;
+}
+.form_update .form-update-item:last-child {
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+    border: 2px solid rgba(255, 179, 0);
+}
+#btn-update {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: none;
+    width: max-content;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    z-index: 9;
+ 
+}
+ .form-update-item:last-child::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: 5;
+    content: '';
+    border: 2px solid transparent;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+ .form-update-item:last-child:hover::before {
+    animation: btnUpdateBefore .5s linear forwards;
+    -webkit-animation: btnUpdateBefore .5s linear forwards;
+}
+@keyframes btnUpdateBefore{
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: red;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: red;
+        border-right-color: red;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: red;
+        border-right-color: red;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    
+
+}
+.form-update-item:last-child::after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: 5;
+    content: '';
+    border: 2px solid transparent;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.form-update-item:last-child:hover::after {
+    animation: btnUpdateAfter .5s  linear forwards;
+    -webkit-animation: btnUpdateAfter .5s  linear forwards;
+}
+
+@keyframes btnUpdateAfter{
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: red;
+    }
+    50% {
+        width: 0;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: red;
+        border-left-color: red;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: red;
+        border-left-color: red;
+    }
+
+}
+th {
+    background: #c62d04;
+    color: #fff;
+}
+.undefined {
+    display: block;
+    width: 100%;
+    border: 1px solid blue;
+    height: 2px;
+    background: blue;
+    z-index: 9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+} 
+input:focus ~ .undefined ,
+input:valid ~ .undefined {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+td > button {
+    padding: 0.5rem 2rem;
+    background: transparent;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+td > button:hover {
+    background: tomato;
+    color: #fff;
+    border-color: #000;
+}
+#errorName,#errorPass ,#errorReset,#errorPhone,#errorPassCompare,#errorResetPassCompare{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    border-bottom: 2px solid red;
+    font-size: 1.2rem;
+    width: 100%;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    color: red;
+    text-align: right;
+}
+#sucessName,#sucessPass,#sucessReset,#sucessPhone {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    border-bottom: 2px solid rgb(16, 255, 52);
+    font-size: 1.2rem;
+    width: 100%;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    text-align: right;
+    color: rgb(16, 255, 52);
+}
+@media only screen and (max-width:992px) {
+    .form_update {
+        width: 50%;
+    }
+    table {
+        width: 70%;
+    }
+    body {
+        padding: 1rem;
+    }
+    th {
+        display: none;
+    }
+    tr {
+        width: 100%;
+        margin: 1rem 0;
+        display: block;
+    }
+    tr:last-child {
+        margin-bottom: 0 !important;
+    }
+    td {
+        width: 100%;
+        display: inline-block;
+        text-align: right;
+        padding: 1.5rem 1rem;
+        position: relative;
+    }
+    td::before {
+        background: #c62d04;
+        color: #fff;
+        font-weight: bold;
+        min-width: 128px;
+    }
+    td:nth-child(1)::before {
+        width: max-content;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: 'ID';
+        border: 1px solid;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding:  0 1rem;
+        
+    }
+    td:nth-child(2)::before {
+        width: max-content;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: 'Username';
+        border: 1px solid;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding:  0 1rem;
+        
+    }
+    td:nth-child(3)::before {
+        width: max-content;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: 'Password';
+        border: 1px solid;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding:  0 1rem;
+        
+    }
+    td:nth-child(4)::before {
+        width: max-content;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: 'Phone';
+        border: 1px solid;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding:  0 1rem;
+        
+    }
+    td:nth-child(5)::before {
+        width: max-content;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: 'Action';
+        border: 1px solid;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding:  0 1rem;
+        
+    }
+} 
+@media only screen and (max-width:776px) {
+    .form_update {
+        width: 60%;
+    }
+} 
+@media only screen and (max-width:640px) {
+    .form_update {
+        width: 70%;
+    }
+} 
+@media only screen and (max-width:545px) {
+    .form_update {
+        width: 100%;
+    }
+    body {
+        padding: 1rem;
+    }
+} 

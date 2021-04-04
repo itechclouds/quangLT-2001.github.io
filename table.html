@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admistrator</title>
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="icon" href="—Pngtree—users vector_3725294.png" type="Image/png" size="20x20">
+</head>
+<body onload="renderUser()">
+    <div class="form_update">
+       
+        <h1>
+            Update User
+        </h1>
+        <div class="form-update-item">
+            <input type="hidden" name="" id="index">
+        </div>
+        <div class="form-update-item">
+            <input type="text" name="name" id="name" required>
+            <label for="name">
+                Username...
+            </label>
+            <span class="undefined"></span>
+            <span id="errorName">
+                <i class="fas fa-exclamation-circle"></i>
+            </span>
+            <span id="sucessName">
+                <i class="fas fa-check-circle"></i>
+            </span>
+        </div>
+        <div class="form-update-item">
+            <input type="password" name="pass" id="pass" required>
+            <label for="pass">
+                Password...
+            </label>
+            <span class="undefined"></span>
+            <span id="errorPass">
+                <i class="fas fa-exclamation-circle"></i>
+            </span>
+            <span id="sucessPass">
+                <i class="fas fa-check-circle"></i>
+            </span>
+        </div>
+        <div class="form-update-item">
+            <input type="password" name="resetPass" id="resetPass" required>
+            <label for="resetPass">
+                Enter The Password...
+            </label>
+            <span class="undefined"></span>
+            <span id="errorReset">
+                <i class="fas fa-exclamation-circle"></i>
+            </span>
+            <span id="sucessReset">
+                <i class="fas fa-check-circle"></i>
+            </span>
+        </div>
+        <div class="form-update-item">
+            <input type="text" name="phone" id="phone" required>
+            <label for="phone">
+                Phone Number...
+            </label>
+            <span class="undefined"></span>
+            <span id="errorPhone">
+                <i class="fas fa-exclamation-circle"></i>
+            </span>
+            <span id="sucessPhone">
+                <i class="fas fa-check-circle"></i>
+            </span>
+        </div>
+        <div class="form-update-item">
+            <input type="button" id="btn-update" onclick="updateUser()" value="UPDATE USER">
+            
+            </input>
+            
+        </div>
+    </div>
+    <h2>Bảng Lưu Trữ Thông Tin</h2>
+    <table border="1" style="border:2px solid rgb(197, 174, 174);" id="table" cellspacing="0" cellpadding="10">
+     
+       
+    </table>
+</body>
+<script src="table.js"></script>
+</html>
