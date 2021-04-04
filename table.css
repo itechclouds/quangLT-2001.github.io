@@ -434,6 +434,27 @@ td > button:hover {
 } 
 @media only screen and (max-width:430px) {
     td::before {
-        max-width: 100px;
+        min-width: 100px;
+        font-size: 1rem;
+    }
+} 
+@media only screen and (max-width:405px) {
+    td::before {
+     
+        font-size: 0.8rem;
+        min-width: 80px;
+    }
+} 
+@media only screen and (max-width:374px) {
+    td::before {
+        min-width: 70px;
+        font-size: 0.7rem;
+    }
+} 
+@media only screen and (max-width:351px) {
+    td::before {
+        min-width: 50px;
+        font-size: 0.5rem;
+        padding: 0 0.3rem !important;
     }
 } 
