@@ -419,6 +419,10 @@ td > button:hover {
     .form_update {
         width: 70%;
     }
+    table {
+        width: 100% !important;
+        display: inline-block !important;
+    }
 } 
 @media only screen and (max-width:545px) {
     .form_update {
@@ -426,5 +430,10 @@ td > button:hover {
     }
     body {
         padding: 1rem;
+    }
+} 
+@media only screen and (max-width:430px) {
+    td::before {
+        max-width: 100px;
     }
 } 
