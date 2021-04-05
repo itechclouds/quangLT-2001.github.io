@@ -10,11 +10,12 @@
     <link rel="icon" href="—Pngtree—users vector_3725294.png" type="Image/png" size="20x20">
 </head>
 <body onload="renderUser()">
+    <h2 data-text="Update&nbsp;User">
+        Update&nbsp;User
+    </h2>
     <div class="form_update">
        
-        <h1>
-            Update User
-        </h1>
+       
         <div class="form-update-item">
             <input type="hidden" name="" id="index">
         </div>
@@ -32,7 +33,7 @@
             </span>
         </div>
         <div class="form-update-item">
-            <input type="password" name="pass" id="pass" required>
+            <input type="password" onkeyup="strigger()" name="pass" id="pass" required>
             <label for="pass">
                 Password...
             </label>
@@ -43,6 +44,12 @@
             <span id="sucessPass">
                 <i class="fas fa-check-circle"></i>
             </span>
+            <div class="indicator">
+                <span id="weak"></span>
+                <span id="medium"></span>
+                <span id="strong"></span>
+            </div>
+            
         </div>
         <div class="form-update-item">
             <input type="password" name="resetPass" id="resetPass" required>
@@ -77,7 +84,7 @@
             
         </div>
     </div>
-    <h2>Bảng Lưu Trữ Thông Tin</h2>
+    <h3>Bảng Lưu Trữ Thông Tin</h3>
     <table border="1" style="border:2px solid rgb(197, 174, 174);" id="table" cellspacing="0" cellpadding="10">
      
        

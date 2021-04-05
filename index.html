@@ -14,11 +14,8 @@
 
 <body>
     <div class="wrapper">
-        <div class="video">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/f02mOEt11OQ?rel=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <h2>
-            Create Account
+        <h2 data-text="Create&nbsp;Account">
+            Create&nbsp;Account
         </h2>
         <div class="form">
            
@@ -37,10 +34,10 @@
                     </span>
                 </div>
                 <div class="form-item">
-                    <input type="password" name="pass" id="pass" required>
+                    <input onkeyup="strigger()" type="password" name="pass" id="pass" required>
                     <label for="pass">
                         Password:
-                    </label>
+                    </label> 
                     <span class="undefined"></span>
                     <span id="errorPass">
                         <i class="fas fa-exclamation-circle"></i>
@@ -48,7 +45,12 @@
                     <span id="sucessPass">
                         <i class="fas fa-check-circle"></i>
                     </span>
-
+                    <div class="indicator">
+                        <span id="weak"></span>
+                        <span id="medium"></span>
+                        <span id="strong"></span>
+                    </div>
+                   
                 </div>
                 <div class="form-item">
                     <input type="password" name="resetPass" id="resetPass" required>
@@ -91,7 +93,7 @@
             <span class="border"></span>
         </div>
     </div>
-
+ 
     <script src="form.js"></script>
 </body>
 

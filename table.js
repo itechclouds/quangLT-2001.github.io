@@ -30,6 +30,58 @@ function renderUser() {
     resetForm();
 
 }
+   
+function strigger() {
+    let name = document.getElementById('name').value;
+    let pass = document.getElementById('pass').value;
+    let enterThePass = document.getElementById('resetPass').value;
+    let phone = document.getElementById('phone').value;
+    let weak = document.getElementById('weak');
+    console.log(weak);
+    let medium = document.getElementById('medium');
+    let strong = document.getElementById('strong');
+    let indicator = document.querySelector('.indicator');
+ 
+    if(pass != "")
+     {
+        indicator.style.opacity = "1"
+        indicator.style.visibility = "visible"
+        
+    }
+    else {
+        indicator.style.opacity = "0"
+        indicator.style.visibility = "hidden"
+    }
+    if(pass.length <=8 ) {
+        weak.style.background = "none";
+        medium.style.background = "none";
+        strong.style.background = "none";
+    }
+    if(pass.length>=9 &&pass.length < 12) {
+        weak.style.display = "block"
+        weak.style.background = "#ff4757";
+        medium.style.background = "none";
+        strong.style.background = "none";
+        strong.style.display = "none";
+        medium.style.display = "none"
+    }
+    else if(pass.length>=12 && pass.length<16) {
+        weak.style.display = "none";
+        medium.style.background = "orange";
+        strong.style.background = "none";
+        medium.style.display = "block";
+        strong.style.display = "none"
+        weak.style.background = "none";
+    }
+    else if(pass.length >=16) {
+        medium.style.display = "none"
+        strong.style.background = "#23ad5c";
+        weak.style.display = "none";
+        medium.style.background = "orange";
+        strong.style.display = "block"
+        weak.style.background = "none";
+    }
+} 
 function editUser(index) {
     const listUser = localStorage.getItem('user')
         ? JSON.parse(localStorage.getItem('user')) : []

@@ -7,17 +7,51 @@
 table {
     width: 80%;
 }
-table,h1,h2 {
+table,h1,h3 {
     margin:0.2rem auto;
     text-align: center;
     text-transform: uppercase;
 }
-h2 {
+h3 {
     color: #fff;
     margin: 3rem 0 1.2rem;
     font-size: 2rem;
     text-transform: uppercase;
     text-shadow: 2px 4px 2px #000;
+}
+h2 {
+    margin: 5rem 0.3rem 0;
+    font-size: 7vw;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    color: #252839;
+    z-index: 4;
+    -webkit-text-stroke: 0.3vw #383d52;
+    width: max-content;
+    margin: auto;
+   
+}
+h2::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #fff;
+    -webkit-text-stroke: 0vw #383d52;
+    overflow: hidden;
+    animation: anime 6s linear infinite;
+    -webkit-animation: anime 6s linear infinite;
+}
+@keyframes anime  {
+    0%,10%,100% {
+        width: 0;
+    }
+    70%,90% {
+        width: 100%;
+    }
 }
 table {
     background: gainsboro;
@@ -458,3 +492,62 @@ td > button:hover {
         padding: 0 0.3rem !important;
     }
 } 
+.indicator {
+    height: 10px ;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 115%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    background: #ddd;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.indicator > span {
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+    position: relative;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.indicator > span::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: red;
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+
+}
+.indicator > span:first-child {
+    background: #ff4757;
+}
+.indicator > span:nth-child(2) {
+    background: orange;
+}
+.indicator > span:last-child {
+    background: #23ad5c;
+}
