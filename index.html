@@ -32,6 +32,7 @@
                     <span id="sucessName">
                         <i class="fas fa-check-circle"></i>
                     </span>
+                    <span id="errorNameText"></span>
                 </div>
                 <div class="form-item">
                     <input onkeyup="strigger()" type="password" name="pass" id="pass" required>
@@ -50,7 +51,7 @@
                         <span id="medium"></span>
                         <span id="strong"></span>
                     </div>
-                   
+                   <span id="errorPassText"></span>
                 </div>
                 <div class="form-item">
                     <input type="password" name="resetPass" id="resetPass" required>
@@ -64,6 +65,7 @@
                     <span id="sucessReset">
                         <i class="fas fa-check-circle"></i>
                     </span>
+                    <span id="errorResetText"></span> 
                 </div>
                 <div class="form-item">
                     <input type="text" name="phone" id="phone" required>
@@ -77,6 +79,7 @@
                     <span id="sucessPhone">
                         <i class="fas fa-check-circle"></i>
                     </span>
+                    <span id="errorPhoneText"></span>
                 </div>
                 <div class="form-item">
                     <input type="button" value="CREATE" class="btn-submit" id="submit" onclick="saveAccount()">

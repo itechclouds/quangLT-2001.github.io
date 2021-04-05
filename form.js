@@ -8,18 +8,26 @@
         let medium = document.getElementById('medium');
         let strong = document.getElementById('strong');
         let isCheck = pass !== enterThePass;
+        let errorNameText = document.getElementById('errorNameText');
+        let errorPassText = document.getElementById('errorPassText');
+        let errorResetText = document.getElementById('errorResetText');
+        let errorPhoneText = document.getElementById('errorPhoneText');
+
         if(name == "" || name.length > 25 || name.length <= 8) {
-            document.getElementById('errorName').style.transform = "scale(1)"
+            document.getElementById('errorName').style.transform = "scale(1)";
+            errorNameText.innerText = "Invalid Username!!!";
         }
         else {
             document.getElementById('errorName').style.transform = "scale(0)";
             document.getElementById('sucessName').style.transform = "scale(1)"
-           
+            errorNameText.innerText = "";
 
         }
         if(pass == "" || enterThePass == "" || pass.length < 8 || isCheck) {
-            document.getElementById('errorPass').style.transform = "scale(1)"
-            document.getElementById('errorReset').style.transform = "scale(1)"
+            document.getElementById('errorPass').style.transform = "scale(1)";
+            document.getElementById('errorReset').style.transform = "scale(1)";
+            errorPassText.innerText = "Invalid password";
+            errorResetText.innerText = "Invalid password";
         }
         else {
             document.getElementById('errorPass').style.transform = "scale(0)";
@@ -30,6 +38,7 @@
         }
         if(phone == "" || phone.length <=8 || phone.length > 10) {
             document.getElementById('errorPhone').style.transform = "scale(1)";
+            errorPhoneText.innerText = "Invalid phone";
 
         }
         else {
@@ -40,6 +49,7 @@
         if(isNaN(phone)) {
             document.getElementById('errorPhone').style.transform = "scale(1)";
             document.getElementById('sucessPhone').style.transform = "scale(0)";
+            errorPhoneText.innerText = "Invalid phone";
         }
         if(isCheck || !pass || !enterThePass || phone.length <=8 || isNaN(phone) || phone.length > 10 || pass.length < 8 || name.length > 25 || name.length <=8) {
         }
