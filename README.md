@@ -1,1 +1,0 @@
-# quangdevelop.github.io
